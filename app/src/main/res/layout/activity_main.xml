@@ -6,214 +6,291 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:text="Tambah Sensor"
-        android:textSize="30dp"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-    </TextView>
-    <TextView
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="wrap_content"
-        android:text="Tambah Sensor dengan cara memasukkan SSID dan Password WiFi anda."
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-       <RelativeLayout
-           android:layout_gravity="center"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-
-           <ImageView
-               android:layout_gravity="center"
-               android:layout_width="wrap_content"
-               android:src="@drawable/sensor_input"
-               android:layout_height="wrap_content">
-
-           </ImageView>
-           <EditText
-               android:layout_width="275dp"
-               android:layout_marginTop="20dp"
-               android:layout_marginLeft="18dp"
-               android:hint="SSID"
-               android:inputType="textPersonName"
-               android:id="@+id/ssid"
-               android:background="@android:color/transparent"
-               android:layout_height="wrap_content">
-
-           </EditText>
-       </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:src="@drawable/sensor_input"
-            android:layout_height="wrap_content">
-
-        </ImageView>
-        <EditText
-            android:layout_width="275dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="18dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:id="@+id/password"
-            android:background="@android:color/transparent"
-            android:layout_height="wrap_content">
-
-        </EditText>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:src="@drawable/sensor_input"
-            android:layout_height="wrap_content">
-
-        </ImageView>
-        <EditText
-            android:layout_width="275dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="18dp"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:id="@+id/username"
-            android:background="@android:color/transparent"
-            android:layout_height="wrap_content">
-
-        </EditText>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:src="@drawable/sensor_input"
-            android:layout_height="wrap_content">
-
-        </ImageView>
-        <EditText
-            android:layout_width="275dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="18dp"
-            android:hint="Sensor's Host"
-            android:inputType="textPersonName"
-            android:id="@+id/host"
-            android:background="@android:color/transparent"
-            android:layout_height="wrap_content">
-
-        </EditText>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:text="SUBMIT"
-            android:background="@drawable/sensor_submit"
-            android:id="@+id/submit"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:textColor="#FFF"
-            android:layout_height="wrap_content">
-
-        </Button>
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:textSize="25dp"
-            android:text="Current Sensor's Connections: "
-            android:layout_height="wrap_content">
-
-        </TextView>
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
             <TextView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:text="SSID: "
+                android:text="Tambah Sensor"
+                android:textSize="30dp"
                 android:layout_height="wrap_content">
 
             </TextView>
             <TextView
-                android:id="@+id/ssid_saved"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_width="wrap_content"
+                android:text="Tambah Sensor dengan cara memasukkan SSID dan Password WiFi anda."
                 android:layout_height="wrap_content">
 
             </TextView>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:text="Sensors Available:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/sensor_input"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <EditText
+                    android:layout_width="275dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:hint="Sensor ID"
+                    android:inputType="textPersonName"
+                    android:id="@+id/sensorname"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+<!--                <Spinner-->
+<!--                    android:layout_width="275dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginLeft="18dp"-->
+<!--                    android:id="@+id/sensorname"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                </Spinner>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/sensor_input"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <EditText
+                    android:layout_width="275dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:hint="SSID"
+                    android:inputType="textPersonName"
+                    android:id="@+id/ssid"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/sensor_input"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <EditText
+                    android:layout_width="275dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:id="@+id/password"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/sensor_input"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <EditText
+                    android:layout_width="275dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:hint="Username"
+                    android:inputType="textPersonName"
+                    android:id="@+id/username"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+            </RelativeLayout>
+
+<!--            <RelativeLayout-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:src="@drawable/sensor_input"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                </ImageView>-->
+<!--                <EditText-->
+<!--                    android:layout_width="275dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginLeft="18dp"-->
+<!--                    android:hint="Sensor's Host"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:id="@+id/host"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                </EditText>-->
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:text="SUBMIT"
+                    android:background="@drawable/sensor_submit"
+                    android:id="@+id/submit"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:textColor="#FFF"
+                    android:layout_height="wrap_content">
+
+                </Button>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="25dp"
+                    android:text="Current Sensor's Connections: "
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="SSID: "
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/ssid_saved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Password: "
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/password_saved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Username: "
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/user_saved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Online Status: "
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Password: "
-                android:layout_height="wrap_content">
+    </ScrollView>
 
-            </TextView>
-            <TextView
-                android:id="@+id/password_saved"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Username: "
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-                android:id="@+id/user_saved"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </TextView>
-        </LinearLayout>
-
-    </LinearLayout>
 
 
 
